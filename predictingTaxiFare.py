@@ -60,8 +60,7 @@ print(len(test), 'test examples')
 model = Sequential([
     Dense(32, activation='relu', input_shape=(train[train.columns.difference(['fare_amount'])].shape[1],)),  # Make sure to exclude the target variable
     Dense(8, activation='relu', name='h1'),
-    Dense(8, activation='relu', name='h2'),
-    Dense(1, activation='linear', name='h3')  # Linear activation for the output layer
+    Dense(1, activation='linear', name='h2')  # Linear activation for the output layer
 ])
 
 
